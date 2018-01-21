@@ -9,6 +9,7 @@ document.getElementById("get-quote-btn").onclick = function (){
             console.log(quote);
             var author = response["author"];
             document.getElementById("quote").innerHTML = quote;
+            document.getElementById("author").innerHtml = author;
         }
     };
     request.open("GET", path);
