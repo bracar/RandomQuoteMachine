@@ -7,7 +7,7 @@ function updateQuote(){
             var author = JSON.parse(this.author);
             document.getElementById("quote").innerHTML = quote;
         }
-    });
+    };
     request.open("GET", path);
 }
 document.getElementById("get-quote-btn").onclick = updateQuote;
