@@ -7,9 +7,10 @@ document.getElementById("get-quote-btn").onclick = function (){
             var response = JSON.parse(this.responseText);
             var quote = response.quote;
             console.log(quote);
-            var author = response["author"];
+            var author = response.author;
             document.getElementById("quote").innerHTML = quote;
-            document.getElementById("author").innerHtml = author;
+            console.log(author);
+            document.getElementById("author").innerText = author;
         }
     };
     request.open("GET", path);
