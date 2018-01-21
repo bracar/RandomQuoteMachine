@@ -8,4 +8,6 @@ function updateQuote(){
             document.getElementById("quote").innerHTML = quote;
         }
     });
+    request.open("GET", path);
 }
+document.getElementById("get-quote-btn").onclick(updateQuote);
