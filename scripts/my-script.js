@@ -9,7 +9,7 @@ var updateQuote = function (){
             quote.text = response.quote;
         //    console.log(quote);
             quote.author = response.author;
-            document.getElementById("quote").innerHTML = quote.text;
+            document.getElementById("quote").innerHTML ='"'+ quote.text + '"';
        //     console.log(author);
             document.getElementById("author").innerText = quote.author;
         }
@@ -22,7 +22,15 @@ updateQuote();
 
 document.getElementById("get-quote-btn").onclick = updateQuote;
 
+$(document).ready(function(){
+    $("#tweet-btn").on("click touchstart", function () {
+        var url = "https://twitter.com/intent/tweet?" + "text=" + encodeURIComponent('"') + encodeURIComponent(quote.text) + encodeURIComponent('"') + encodeURIComponent("\n") + encodeURIComponent(quote.author);
+        window.open(url, '_blank');
+     });
+});
+/*
 document.getElementById("tweet-btn").onclick = function () {
   var url = "https://twitter.com/intent/tweet?" + "text=" + encodeURIComponent('"') + encodeURIComponent(quote.text) + encodeURIComponent('"') + encodeURIComponent("\n") + encodeURIComponent(quote.author);
-  window.open(url);
+  window.open(url, '_blank');
 }
+*/
