@@ -1,6 +1,5 @@
 var quote = {};
-
-document.getElementById("get-quote-btn").onclick = function (){
+var updateQuote = function (){
     var path = "https://talaikis.com/api/quotes/random/";
     var request = new XMLHttpRequest();
     request.onreadystatechange = function(){
@@ -19,7 +18,11 @@ document.getElementById("get-quote-btn").onclick = function (){
     request.send();
 };
 
+updateQuote();
+
+document.getElementById("get-quote-btn").onclick = updateQuote;
+
 document.getElementById("tweet-btn").onclick = function () {
-  var url = "https://twitter.com/intent/tweet?" + "text=" + encodeURIComponent(quote.text) + encodeURIComponent("\n") + encodeURIComponent(quote.author);
+  var url = "https://twitter.com/intent/tweet?" + "text=" + encodeURIComponent('"') + encodeURIComponent(quote.text) + encodeURIComponent('"') + encodeURIComponent("\n") + encodeURIComponent(quote.author);
   window.open(url);
 }
