@@ -1,5 +1,12 @@
-#main-title {
-    background-color: cornflowerblue;
+h1 {
+    font-size: 1.5rem;
+}
+#quote {
+    font-size: 1.5rem;
+}
+#author {
+    font-family: 'Parisienne', cursive;
+    font-size: 1.5rem;
 }
 #tweet-btn {
     color: rgb(29, 161, 242);
