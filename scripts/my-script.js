@@ -28,9 +28,3 @@ $(document).ready(function(){
         window.open(url, '_blank');
      });
 });
-/*
-document.getElementById("tweet-btn").onclick = function () {
-  var url = "https://twitter.com/intent/tweet?" + "text=" + encodeURIComponent('"') + encodeURIComponent(quote.text) + encodeURIComponent('"') + encodeURIComponent("\n") + encodeURIComponent(quote.author);
-  window.open(url, '_blank');
-}
-*/
