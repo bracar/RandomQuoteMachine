@@ -8,7 +8,7 @@
     <!-- font awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
     <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Parisienne" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Tillana" rel="stylesheet">
      <!-- Bootstrap CSS -->
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
      <!-- my-styles -->
@@ -16,11 +16,12 @@
 </head>
 <body>
 <div class="jumbotron text-center">
-    <div id="main-title">
+    <div class="container">
+    <div class="row" id="main-title">
         <h1>Random Quote Machine</h1>
     </div>
     <div id="quote-container">
-        <blockquote id="quote"></blockquote>
+        <blockquote class="blockquote blockquote-reverse" id="quote"></blockquote>
         <div id="author-container">
             <p id="author"></p>
         </div>
@@ -32,8 +33,8 @@
         <a class="button" id="tweet-btn" title="Tweet this quote!" target="_blank">
             <i class="fab fa-twitter fa-lg"></i>
         </a>
-        
     </div>
+</div>
 </div>
  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
