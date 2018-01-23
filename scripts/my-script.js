@@ -1,4 +1,8 @@
-var quote = {};
+var quote = quotes[1];
+var showQuote = function (quote){
+    document.getElementById("quote").innerHTML ='"'+ quote.quote + '"';
+    document.getElementById("author").innerText = quote.author;
+};
 var updateQuote = function (){
     var path = "https://talaikis.com/api/quotes/random/";
     var request = new XMLHttpRequest();
@@ -6,12 +10,7 @@ var updateQuote = function (){
         if(this.status == 200 && request.readyState == 4){
             console.log("Parsing");
             var response = JSON.parse(this.responseText);
-            quote.text = response.quote;
-        //    console.log(quote);
-            quote.author = response.author;
-            document.getElementById("quote").innerHTML ='"'+ quote.text + '"';
-       //     console.log(author);
-            document.getElementById("author").innerText = quote.author;
+            showQuote(response);
         }
     };
     request.open("GET", path);
