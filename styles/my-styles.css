@@ -1,17 +1,25 @@
 h1 {
-    font-size: 1rem;
+    font-size: 1em;
+    color: darkorange;
+}
+html, body {
+    background-color: black;
+}
+#quote-container {
+    background-color: white;
 }
 #quote {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     text-align: left;
 }
 #author {
     font-family: 'Tillana', cursive;
-    font-size: 1.5rem;
+    font-size: 1.5em;
     text-align: center;
     margin-left: 4rem;
 }
 #tweet-btn {
     color: rgb(29, 161, 242);
 }
+
