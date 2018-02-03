@@ -24,12 +24,7 @@ function updateQuote(){
     showQuote(quote);
 }
 
-
-
-//document.getElementById("get-quote-btn").onclick = updateQuote;
-
 $(document).ready(function(){
-    console.log("doc ready");
     showQuote(quote);
     $("#get-quote-btn").on("click", updateQuote);
     $("#tweet-btn").on("click touchstart", function () {
