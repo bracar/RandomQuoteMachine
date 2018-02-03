@@ -6,8 +6,8 @@ var showQuote = function (quote){
     document.getElementById("quote").innerHTML ='"'+ quote.quote + '"';
     document.getElementById("author").innerHTML = quote.author;
 };
-showQuote(quote);
-var updateQuote = function (){
+
+function updateQuote(){
     var path = "https://talaikis.com/api/quotes/random/";
     var request = new XMLHttpRequest();
     // get quote AJAX or local
@@ -18,17 +18,20 @@ var updateQuote = function (){
         }else{
             quote = quotes[getRandom()];
         }
-        showQuote(quote);
     };
     request.open("GET", path);
     request.send();
-};
+    showQuote(quote);
+}
 
 
 
-document.getElementById("get-quote-btn").onclick = updateQuote;
+//document.getElementById("get-quote-btn").onclick = updateQuote;
 
 $(document).ready(function(){
+    console.log("doc ready");
+    showQuote(quote);
+    $("#get-quote-btn").on("click", updateQuote);
     $("#tweet-btn").on("click touchstart", function () {
         var url = "https://twitter.com/intent/tweet?" + "text=" + encodeURIComponent('"') + encodeURIComponent(quote.quote) + encodeURIComponent('"') + encodeURIComponent("\n") + encodeURIComponent(quote.author);
         window.open(url, '_blank');
