@@ -1,17 +1,40 @@
 h1 {
-    font-size: 1em;
-    color: darkorange;
+    margin-top: 10px;
+    border-radius: 7px 7px 0 0;
+    border-bottom: solid 3px #f7212c;
+    -webkit-margin-before: 10px;
+    -webkit-margin-after: 0;
+    padding-bottom:  5px;
+    font-size: 1.5em;
+    text-align: center;
+    color: #f8bf21;
+    background-color: rgb(29, 161, 242);
 }
 html, body {
     background-color: black;
 }
+blockquote {
+    margin: 0;
+}
+.btn-primary{
+    background-color: rgb(29, 161, 242);
+    border-radius: 50%;
+    border-color: inherit;
+    pointer-events: auto;
+}
+.btn-primary:focus{
+    outline: 0;
+}
+
 #quote-container {
     background-color: white;
+    border-radius: 0 0 7px 7px;
 }
 #quote {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.2em;
     text-align: left;
+    padding: 1em;
 }
 #author {
     font-family: 'Tillana', cursive;
