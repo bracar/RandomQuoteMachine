@@ -24,6 +24,7 @@ function updateQuote() {
     request.open("GET", path);
     request.send();
     showQuote(quote);
+    $("#get-quote-btn").blur();
 }
 
 $(document).ready(function () {
