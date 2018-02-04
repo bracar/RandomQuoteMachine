@@ -1,13 +1,13 @@
 h1 {
     margin-top: 10px;
     border-radius: 7px 7px 0 0;
-    border-bottom: solid 3px #f7212c;
+    border-bottom: solid 3px #970b12;
     -webkit-margin-before: 10px;
     -webkit-margin-after: 0;
     padding-bottom:  5px;
     font-size: 1.5em;
     text-align: center;
-    color: #f8bf21;
+    color: rgb(14, 13, 13);
     background-color: rgb(29, 161, 242);
 }
 html, body {
@@ -19,6 +19,8 @@ blockquote {
 .btn-primary{
     background-color: rgb(29, 161, 242);
     border-radius: 50%;
+    height: 32px;
+    width: 32px;
     border-color: inherit;
     pointer-events: auto;
 }
@@ -27,7 +29,7 @@ blockquote {
 }
 
 #quote-container {
-    background-color: white;
+    background-color: rgb(255, 245, 217);
     border-radius: 0 0 7px 7px;
 }
 #quote {
@@ -42,7 +44,14 @@ blockquote {
     text-align: center;
     margin-left: 4rem;
 }
+
 #tweet-btn {
+    display: table-cell;
+    padding: 4px;
+    vertical-align: bottom;
+    border: 1px solid pink;
+    background-color: rgb(255, 255, 255);
     color: rgb(29, 161, 242);
+    border-radius: 50%;
 }
 
