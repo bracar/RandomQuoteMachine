@@ -1,57 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Parisienne');
 h1 {
+    font-family: 'Crete Round', serif;
     margin: 10px 0 0 0;
     border-radius: 7px 7px 0 0;
     border-bottom: solid 3px #970b12;
     -webkit-margin-before: 10px;
     -webkit-margin-after: 0;
+    padding-top: 10px;
     padding-bottom:  5px;
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: center;
-    color: rgb(14, 13, 13);
-    background-color: rgb(29, 161, 242);
+    color: #D03C00;
+    background-color: rgba(228, 238, 245, 0.349);
 }
 html, body {
-    background-color: black;
+    background-color: rgb(90, 129, 16);
 }
 blockquote {
     margin: 0;
 }
-.btn-primary{
-    background-color: rgb(29, 161, 242);
-    border-radius: 50%;
+
+.button-row{
+    padding: 0.7em;
+}
+button{
+    display: inline-block;
+    background-color: white;
+    /* background: url(../img/arrow-27-32.png); */
     height: 32px;
     width: 32px;
-    border-color: inherit;
+    border: 0;
     pointer-events: auto;
 }
-.btn-primary:focus{
+button:focus{
     outline: 0;
+}
+button:hover {
+    padding-left: 10px;
 }
 
 #quote-container {
-    background-color: rgb(255, 245, 217);
+    background-color: rgb(255, 255, 255);
     border-radius: 0 0 7px 7px;
 }
 #quote {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2em;
+    color: rgb(55, 80, 10);
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 1.8em;
     text-align: left;
     padding: 1em;
 }
 #author {
-    font-family: 'Tillana', cursive;
-    font-size: 1.5em;
+    color: rgb(90, 129, 16);
+    font-family: 'Parisienne', cursive;
+    font-size: 2em;
     text-align: center;
-    margin-left: 4rem;
+    padding-left: 5em;
+    padding-bottom: 10px;
+    border-bottom: solid 3px #970b12;
+    margin: 0;
 }
 
 #tweet-btn {
     display: table-cell;
-    padding: 4px;
+    padding: 2px;
     vertical-align: bottom;
-    border: 1px solid pink;
-    background-color: rgb(255, 255, 255);
-    color: rgb(29, 161, 242);
     border-radius: 50%;
 }
 
+.container {
+    margin-top: 2em;
+}
+
+@media (min-width: 768px){
+    .container {
+        max-width: 600px;
+        margin-top: 10em;
+        line-height: 2em;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        margin-top: 5px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    #quote{
+        font-size: 1.2em;
+        line-height: 1em;
+    }
+    #author{
+        font-size: 1.2em;
+    }
+}
