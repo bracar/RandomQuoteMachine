@@ -3,12 +3,17 @@ var getRandom = function () {
 };
 var quote = quotes[getRandom()];
 var showQuote = function (quote) {
-    document.getElementById("quote").innerHTML = '"' + quote.quote + '"';
-    document.getElementById("author").innerHTML = quote.author;
+    $("#quote-container").slideUp(600, function () {
+        console.log("show quote");
+        document.getElementById("quote").innerHTML = '"' + quote.quote + '"';
+            document.getElementById("author").innerHTML = quote.author;
+        $("#quote-container").slideDown(600);
+    });
 };
 function showLocalQuote() {
     quote = quotes[getRandom()];
-    showQuote(quote);
+    document.getElementById("quote").innerHTML = '"' + quote.quote + '"';
+    document.getElementById("author").innerHTML = quote.author;
 }
 function updateQuote() {
     var path = "https://talaikis.com/api/quotes/random/";
@@ -19,11 +24,12 @@ function updateQuote() {
             var response = JSON.parse(this.responseText);
             quote = response;
             showQuote(quote);
+        } else {
+            showQuote(quotes[getRandom()]);
         }
-    };
+    }
     request.open("GET", path);
     request.send();
-    showQuote(quote);
     $("#get-quote-btn").blur();
 }
 
@@ -46,14 +52,14 @@ $(document).ready(function () {
 
     function handleTouchEnd(e) {
         var touches = e.changedTouches;
-        var xUp = touches[touches.length-1].clientX;
-        var yUp = touches[touches.length-1].clientY;
+        var xUp = touches[touches.length - 1].clientX;
+        var yUp = touches[touches.length - 1].clientY;
 
         var deltaX = xDown - xUp;
         var deltaY = yDown - yUp;
 
         // swipe in any direction 
-        if (Math.abs(deltaX) > 15 || Math.abs(deltaY) > 15) {
+        if (Math.abs(deltaX) > 15 || Math.abs(deltaY) > 30) {
             updateQuote();
         }
         xDown = null;
