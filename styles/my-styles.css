@@ -10,16 +10,12 @@ h1 {
     padding-bottom:  5px;
     font-size: 2em;
     text-align: center;
-    color: #D03C00;
+    color: rgb(250, 198, 53);
     background-color: rgba(228, 238, 245, 0.349);
 }
 html, body {
     background-color: rgb(90, 129, 16);
 }
-blockquote {
-    margin: 0;
-}
-
 .button-row{
     padding: 0.7em;
 }
@@ -61,12 +57,6 @@ button:hover {
     margin: 0;
 }
 
-#tweet-btn {
-    display: table-cell;
-    padding: 2px;
-    vertical-align: bottom;
-    border-radius: 50%;
-}
 
 .container {
     margin-top: 2em;
@@ -92,5 +82,9 @@ button:hover {
     }
     #author{
         font-size: 1.2em;
+    }
+    .button > img {
+        width: 32px;
+        height: 32px;
     }
 }
