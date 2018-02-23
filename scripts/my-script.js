@@ -2,19 +2,13 @@ var getRandom = function () {
     return Math.floor(Math.random() * quotes.length);
 };
 var quote = quotes[getRandom()];
-var showQuote = function (quote) {
-    $("#quote-container").slideUp(600, function () {
-        console.log("show quote");
+var showQuote = function(quote) {
+    $("#quote-container").slideUp(600, function() {
         document.getElementById("quote").innerHTML = '"' + quote.quote + '"';
             document.getElementById("author").innerHTML = quote.author;
         $("#quote-container").slideDown(600);
     });
 };
-function showLocalQuote() {
-    quote = quotes[getRandom()];
-    document.getElementById("quote").innerHTML = '"' + quote.quote + '"';
-    document.getElementById("author").innerHTML = quote.author;
-}
 function updateQuote() {
     var path = "https://talaikis.com/api/quotes/random/";
     var request = new XMLHttpRequest();
@@ -34,7 +28,6 @@ function updateQuote() {
 }
 
 $(document).ready(function () {
-    showLocalQuote();
     $("#get-quote-btn").on("click", updateQuote);
     $("#tweet-btn").on("click", function () {
         var url = "https://twitter.com/intent/tweet?" + "text=" + encodeURIComponent('"') + encodeURIComponent(quote.quote) + encodeURIComponent('"') + encodeURIComponent("\n") + encodeURIComponent(quote.author);
